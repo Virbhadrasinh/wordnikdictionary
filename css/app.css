@@ -1,0 +1,86 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+p, ul, li {
+    color: #333;
+    margin: 0 0 10px;
+}
+
+textarea {
+    width: 90%;
+    font-size: 15px;
+}
+
+h2 {
+    color: #999;
+    margin: 2px;
+}
+
+.button {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #3071a9;
+    border-color: #285e8e;
+}
+
+.highlight {
+    padding: 9px 14px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    color: #999;
+    font-size: 18px;
+}
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+
+.selected-word {
+    color: #d9534f;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.definitions {
+    color: #f0ad4e;
+}
+
+.examples {
+    color: #5bc0de;
+}
