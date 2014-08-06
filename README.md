@@ -8,7 +8,6 @@ You can also use this for fulfill your word search requirements.
 To run this you need following things.
 * Wordnik ApiKey
 * Jquery (DOM manipulation library)
-* 
 
 # Issues & Contribution
 
