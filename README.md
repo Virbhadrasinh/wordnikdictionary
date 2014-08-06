@@ -1,10 +1,10 @@
 # Wordnik Dictionary
-This the dictionary for get some definitions and examples for your selected word.
+This is the dictionary which helps in getting some definitions and examples for a word selected from input paragraph.
 <a href="http://virbhadrasinh.github.io/wordnikdictionary/">Demo</a>
 
-You can also use this for fulfill your word search requirements.
+You can also use this to fulfill your word search requirements.
 
-To run this you need following things.
+To use this you need following:
 * Wordnik ApiKey
 * Jquery (DOM manipulation library)
 
