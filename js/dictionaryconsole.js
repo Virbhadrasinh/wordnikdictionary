@@ -109,8 +109,11 @@
 
     /*Reset input button event registration*/
     $('.js-reset-button').on('click', function () {
+        $('.js-paragraph-container').html('');
+        $('.js-word-container').html('');
         $('.js-dictionary-container').hide();
         $('.js-input-paragraph').show();
+        words = {};
     });
 
 })(jQuery);
