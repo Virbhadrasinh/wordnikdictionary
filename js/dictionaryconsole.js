@@ -55,7 +55,7 @@
     }
 
     function defineWord(event) {
-        var word = event.currentTarget.innerText.trim();
+        var word = $(event.currentTarget).html().trim();
 
         if (typeof(words[word]) === 'undefined') {
             $.when($.ajax({
