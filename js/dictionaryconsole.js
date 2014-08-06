@@ -61,7 +61,7 @@
         /*This function will fetch definitions and examples for selected word from the wordnik API*/
 
         /*Selected word*/
-        var word = event.currentTarget.innerText.trim();
+        var word = $(event.currentTarget).html().trim();
 
         /*Fetch selected word details from wordnik API if the word is not there in local words variable
          * First call is for get definitions and second for the examples.
