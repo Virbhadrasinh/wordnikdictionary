@@ -1,5 +1,6 @@
 (function ($) {
     "use strict";
+    /*All constants required for make Ajax call for get definitions and examples for particular word*/
     var wordMeaningContainer = $('.js-word-container'),
         apiKey = '6b563843268cdcc64182c08da24064865d70eafbefd5579e2'.trim(),
         examplesConfig = {
@@ -19,6 +20,7 @@
         words = {};
 
     function displayDefinitions(definitions) {
+        /*This function will display all definitions for selected word which are fetched from the wordnik API*/
         var definitionsContainer = $('<div class="definitions"><h3>Definitions</h3></div>'),
             ul = $('<ul></ul>');
         definitionsContainer.append(ul);
@@ -37,6 +39,7 @@
     }
 
     function displayExamples(examples) {
+        /*This function will display all examples for selected word which are fetched from the wordnik API*/
         var examplesContainer = $('<div class="examples"><h3>Examples</h3></div>'),
             ul = $('<ul></ul>');
         examplesContainer.append(ul);
@@ -55,8 +58,14 @@
     }
 
     function defineWord(event) {
+        /*This function will fetch definitions and examples for selected word from the wordnik API*/
+
+        /*Selected word*/
         var word = event.currentTarget.innerText.trim();
 
+        /*Fetch selected word details from wordnik API if the word is not there in local words variable
+         * First call is for get definitions and second for the examples.
+         * When response come from both the API call render fetched details for the particular word*/
         if (typeof(words[word]) === 'undefined') {
             $.when($.ajax({
                 type: 'GET',
@@ -69,11 +78,13 @@
                 dataType: 'json',
                 data: examplesConfig
             })).then(function (definitions, examples) {
+                /*Add selected word to local variable*/
                 words[word] = {
                     definitions: definitions,
                     examples: examples
                 };
 
+                /*Word details display logic*/
                 var oldHTML = wordMeaningContainer.html();
                 wordMeaningContainer.html('');
 
@@ -93,8 +104,10 @@
         }
     }
 
+    /*Double click event registration for all words of the input.*/
     $(document).on('dblclick', '.js-paragraph-container>span', defineWord);
 
+    /*Reset input button event registration*/
     $('.js-reset-button').on('click', function () {
         $('.js-dictionary-container').hide();
         $('.js-input-paragraph').show();
