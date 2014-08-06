@@ -84,3 +84,7 @@ h2, h5 {
 .examples {
     color: #5bc0de;
 }
+
+.js-paragraph-container>span {
+    cursor: pointer;
+}
