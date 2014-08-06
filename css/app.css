@@ -15,7 +15,7 @@ textarea {
     font-size: 15px;
 }
 
-h2 {
+h2, h5 {
     color: #999;
     margin: 2px;
 }
